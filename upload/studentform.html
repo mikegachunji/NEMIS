@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>IF/16/14</title>
+</head>
+<body>
+	<form action="" name="form1">
+		Registration Form
+		<p>
+			Reg. Number:
+			<input type="text" name="txtRegNo">
+		</p>
+		<p>
+			Full Names:
+			<input type="text" name="txtName">
+		</p>
+		<p>
+			Year of Study:
+			<input type="text" name="txtYear" size="1" maxlength="1">
+		</p>
+		<p>
+			<input type="button" value="Check Details" name="btnCheckForm">
+		</p>
+	</form>
+
+	<script>
+		var myForm = document.form1;
+
+		function btnCheckFormClick(e) {
+			var txtRegNo = myForm.txtRegNo;
+			var txtName = myForm.txtName;
+			var txtYear = myForm.txtYear;
+
+			if (txtRegNo.value == "" || txtName.value == "" || txtYear.value == "") {
+				alert("Please complete the whole form");
+			}			
+			
+			if(txtYear.value > 0 && txtYear.value < 8) {
+				alert("Thanks for completing the form");
+			} else {
+				alert("Only values from 1 to 7 are allowed");
+			}
+			
+		}
+		
+		myForm.btnCheckForm.addEventListener("click", btnCheckFormClick);
+	</script>
+</body>
+</html>

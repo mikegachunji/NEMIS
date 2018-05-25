@@ -1,0 +1,16 @@
+body {
+	margin-top: 110px;
+	background-color: white;
+}
+
+.bg-success{
+	background-color: #563d7c !important;
+}
+
+.navbar-brand{
+	color: #ffe484 !important;
+}
+
+th { background-color: #999; }
+.odd_row { background-color: #EEE; }
+.even_row { background-color: #FFF; }

@@ -1,0 +1,24 @@
+function randomStrin(len, charSet) {
+        let randomString = ''
+        for (let i = 0; i < len; i++) {
+            let randomPoz = Math.floor(Math.random() * charSet.length)
+            randomString += charSet.substring(randomPoz, randomPoz + 1)
+        }
+        return randomString
+    },
+
+
+
+
+
+/****
+***examples
+***/
+
+//To generate upi for school
+randomString(2, 'BCDFGHJKLMNPQRSUVWXZ')
+
+//Tog generate upi for student
+	const mid = this.randomString(2, 'BCDFGHJKLMNPQRSVWXYZ')
+        const postHyphen = this.randomString(2, '0123456789')
+        const upi = `${preHyphen}-${mid}-${postHyphen}`
